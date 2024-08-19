@@ -12,7 +12,7 @@ function addToCollection(collection, title, artist, yearPublished) {
 collection.push(album);
 return album;
 }
-console.log(addToCollection(myCollection, 'someone you loved', 'lewis Capaldi', '2019'));
+console.log(addToCollection(myCollection, 'someone you loved', 'Lewis Capaldi', '2019'));
 console.log(addToCollection(myCollection, 'Billie Jean', 'Michael Jackson', '1983'));
 console.log(addToCollection(myCollection, 'Lonely', 'Akon', '2005'));
 console.log(addToCollection(myCollection, 'One Love', 'Bob Marley', '1965'));
@@ -27,6 +27,8 @@ function showCollection(collection) {
       console.log(`${album.title} by ${album.artist}, published in ${album.yearPublished}`);
   }
 }
+showCollection(myCollection);
+
 function findByArtist(collection, artist) {
   let results = [];
   for (let album of collection) {
@@ -38,32 +40,12 @@ function findByArtist(collection, artist) {
 }
 
 
-console.log(findByArtist(myCollection, '2Pac')); // Should return albums by Artist A
-console.log(findByArtist(myCollection, 'Lewis Capaldi')); // Should return an empty array
-
-function search(collection, searchCriteria) {
-  if (!searchCriteria || (!searchCriteria.artist && !searchCriteria.year)) {
-      return collection;
-  }
-
-  let results = [];
-  for (let album of collection) {
-      let artistMatch = searchCriteria.artist ? album.artist === searchCriteria.artist : true;
-      let yearMatch = searchCriteria.year ? album.yearPublished === searchCriteria.year : true;
-
-      if (artistMatch && yearMatch) {
-          results.push(album);
-      }
-  }
-  return results;
-}
-
-console.log(search(myCollection, { artist: '2Pac', year: 1996 })); 
-console.log(search(myCollection, { artist: 'lewis capaldi', year: 2019 }));
-console.log(search(myCollection, {})); 
-console.log(search(myCollection)); 
-console.log(search(myCollection, { artist: 'Michael Jackson', year: 1983 })); 
-
+console.log(findByArtist(myCollection, '2Pac')); 
+console.log(findByArtist(myCollection, 'Lewis Capaldi')); 
+console.log(findByArtist(myCollection, 'Michael Jackson'));
+console.log(findByArtist(myCollection, 'Bob Marley'));
+console.log(findByArtist(myCollection, 'Whitney Houston'));
+console.log(findByArtist(myCollection, 'Akon'));
 try {
   module.exports = {
     myCollection:
