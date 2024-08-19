@@ -75,6 +75,29 @@ console.log(' My music collection is', myCollection);
 
 
 
+  //- Create a function named `showCollection`. This function should:
+  function showCollection () {
+    
+  }
+  //- Take in a `collection` parameter. (This allows it to be reused to show any array of album objects.)
+  //- Loop through the `collection` and `console.log` each album's information formatted **within a single string**, like: `TITLE by ARTIST, published in YEAR`.
+
+//- Test the `showCollection` function.
+
+//- Add a function named `findByArtist`. This function should:
+  //- Take in a `collection` parameter. Remember, we want to be able to search any collection!
+  //- Take in an `artist` (string) parameter.
+  //- Create an empty array to hold any matching results, if any.
+  //- Loop through the `collection` and add any album objects with a matching artist to the array.
+  //- Return the array with the matching results. (If no results are found, an empty array should be returned.)
+
+//- Test the `findByArtist` function. Make sure to test with an artist you know is in the collection, as well as an artist you know is not in your collection. Check that for artists with multiple matches, all are returned.
+
+//> When testing your functions, write all tests in the JavaScript file!
+
+
+
+
 // PLEASE DO NOT MODIFY THIS. Just leave it down here at the bottom. Think of it
 // as a lil' chunk of friendly code that you don't need to understand right now.
 // (It's used for automated testing.)
