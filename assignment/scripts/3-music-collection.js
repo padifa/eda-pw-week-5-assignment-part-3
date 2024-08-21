@@ -64,7 +64,6 @@ console.log(
 console.log("The album found is:", findByArtist(myCollection, "Akon"));
 
 
-  
 
 try {
   module.exports = {
